@@ -1,5 +1,7 @@
 /* global require */
 var gulp 		= require('gulp');
+var umd 		= require('gulp-umd');
+var rename 		= require("gulp-rename");
 var ts 			= require('gulp-typescript');
 
 var eventStream = require('event-stream');
@@ -15,4 +17,18 @@ gulp.task('scripts', function() {
         tsResult.dts.pipe(gulp.dest('release/definitions')),
         tsResult.js.pipe(gulp.dest('release/js'))
     );
+});
+
+gulp.task('build', ['scripts'], function () {
+	return gulp.src('./release/js/camljs.js')
+				.pipe(umd({
+			      exports: function() {
+			          return 'CamlBuilder';
+			        },
+			        namespace: function() {
+			          return 'CamlBuilder';
+			        }
+			    }))
+				.pipe(rename('camljs-umd.js'))
+				.pipe(gulp.dest('./release/js'));
 });
