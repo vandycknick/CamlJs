@@ -1,0 +1,27 @@
+{
+  "name": "CamlJs",
+  "version": "2.5.0",
+  "description": "CamlJs library clone from codeplex.",
+  "main": "dist/umd/camljs.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vdyckn/CamlJs.git"
+  },
+  "keywords": [
+    "SharePoint"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vdyckn/CamlJs/issues"
+  },
+  "homepage": "https://github.com/vdyckn/CamlJs",
+  "devDependencies": {
+    "event-stream": "^3.2.1",
+    "gulp": "^3.8.10",
+    "gulp-typescript": "^2.4.0"
+  }
+}
