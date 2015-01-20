@@ -7,3 +7,4 @@ pkgobj
 *.js.map
 .tmp
 node_modules
+packages
