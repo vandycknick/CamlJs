@@ -32,3 +32,17 @@ gulp.task('build', ['scripts'], function () {
 				.pipe(rename('camljs-umd.js'))
 				.pipe(gulp.dest('./release/js'));
 });
+
+gulp.task('copy', function () {
+	return gulp.src('./release/js/camljs.js')
+				.pipe(gulp.dest('./Nuget/content/Scripts'));
+});
+
+//ald copy.cmd file
+//done -> gulp-typescript
+//"C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\tsc" --declaration CamlJs\camljs.ts --out camljs.d.ts
+//copy CamlJs\camljs.js Nuget\content\Scripts
+//copy CamlJs\camljs.js CamlJs.TestApp\Scripts
+//copy camljs.d.ts ..\DefinitelyTyped\camljs
+//copy CamlJs\camljs.js ..\camljs-console\Scripts\
+//copy camljs.d.ts ..\camljs-console\Scripts\typings\camljs

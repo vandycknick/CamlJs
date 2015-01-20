@@ -2,7 +2,7 @@
   "name": "CamlJs",
   "version": "2.5.0",
   "description": "CamlJs library clone from codeplex.",
-  "main": "dist/umd/camljs.js",
+  "main": "release/js/camljs-umd.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
