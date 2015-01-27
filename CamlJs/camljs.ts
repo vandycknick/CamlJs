@@ -1204,9 +1204,10 @@ module CamlBuilder {
             return sb.toString();
         }
         FinalizeToSPQuery() {
-            var camlWhere = this.Finalize();
+            /* Update NVD: */
+            var caml = this.Finalize();
             var query = new window["SP"].CamlQuery();
-            query.set_viewXml("<View><Query>" + camlWhere + "</Query></View>");
+            query.set_viewXml(caml);
             return query;
         }
     }
